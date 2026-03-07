@@ -57,6 +57,42 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UcNajemcy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcNajemcy.Designer.cs">
+      <DependentUpon>UcNajemcy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcNieruchomosci.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcNieruchomosci.Designer.cs">
+      <DependentUpon>UcNieruchomosci.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcOplaty.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcOplaty.Designer.cs">
+      <DependentUpon>UcOplaty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcPulpit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcPulpit.Designer.cs">
+      <DependentUpon>UcPulpit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcUmowy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcUmowy.Designer.cs">
+      <DependentUpon>UcUmowy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcWlasciciele.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcWlasciciele.Designer.cs">
+      <DependentUpon>UcWlasciciele.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -69,6 +105,24 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UcNajemcy.resx">
+      <DependentUpon>UcNajemcy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcNieruchomosci.resx">
+      <DependentUpon>UcNieruchomosci.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcOplaty.resx">
+      <DependentUpon>UcOplaty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcPulpit.resx">
+      <DependentUpon>UcPulpit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcUmowy.resx">
+      <DependentUpon>UcUmowy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcWlasciciele.resx">
+      <DependentUpon>UcWlasciciele.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

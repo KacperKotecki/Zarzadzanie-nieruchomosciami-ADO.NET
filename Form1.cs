@@ -19,41 +19,52 @@ namespace Zarzadzanie_nieruchomosciami_ADO.NET
             InitializeComponent();
         }
 
-        private void btn_Wczytaj_Dane_Click(object sender, EventArgs e)
+        private void ZaladujWidok(UserControl nowyWidok)
         {
-            string query = "SELECT * FROM Wlasciciele";
+            
+            panelDesktop.Controls.Clear();
 
-            using (OleDbConnection connection = new OleDbConnection(connectionString))
-            {
-                try
-                {
-                    
-                    OleDbDataAdapter adapter = new OleDbDataAdapter(query, connection);
+            nowyWidok.Dock = DockStyle.Fill;
 
-                    
-                    DataTable dataTable = new DataTable();
+            panelDesktop.Controls.Add(nowyWidok);
 
-                    
-                    adapter.Fill(dataTable);
-
-                    
-                    dgv.DataSource = dataTable;
-                }
-                catch (Exception ex)
-                { 
-                    MessageBox.Show("Nie udało się pobrać danych: " + ex.Message);
-                }
-            }
+            nowyWidok.BringToFront();
         }
 
-        private void btn_Dodaj_Click(object sender, EventArgs e)
+        private void btnPulpit_Click(object sender, EventArgs e)
         {
-
+            UcPulpit widokPulpitu = new UcPulpit();
+            ZaladujWidok(widokPulpitu);
         }
 
-        private void btn_Usun_Click(object sender, EventArgs e)
+        private void btnNajemcy_Click_1(object sender, EventArgs e)
         {
-
+            UcNajemcy widokNajemcow = new UcNajemcy();
+            ZaladujWidok(widokNajemcow);
         }
+        private void btnWlasciciele_Click(object sender, EventArgs e)
+        {
+            UcWlasciciele widokWlascicieli = new UcWlasciciele();
+            ZaladujWidok(widokWlascicieli);
+        }
+
+        private void btnNieruchomosci_Click(object sender, EventArgs e)
+        {
+            UcNieruchomosci widokNieruchomosci = new UcNieruchomosci();
+            ZaladujWidok(widokNieruchomosci);
+        }
+
+        private void btnUmowy_Click(object sender, EventArgs e)
+        {
+            UcUmowy widokUmow = new UcUmowy();
+            ZaladujWidok(widokUmow);
+        }
+
+        private void btnOplaty_Click(object sender, EventArgs e)
+        {
+            UcOplaty widokOplat = new UcOplaty();
+            ZaladujWidok(widokOplat);
+        }
+
     }
 }
