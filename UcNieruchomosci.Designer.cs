@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -39,8 +41,6 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.lb_nieruchomosci = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label5 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -64,6 +64,23 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1529, 36);
             this.panel1.TabIndex = 3;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(1035, 7);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(25, 13);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Typ";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(1066, 6);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 21);
+            this.comboBox2.TabIndex = 11;
             // 
             // label4
             // 
@@ -148,25 +165,8 @@
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView1.Location = new System.Drawing.Point(0, 36);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1529, 717);
+            this.dataGridView1.Size = new System.Drawing.Size(1529, 812);
             this.dataGridView1.TabIndex = 10;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(1035, 7);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(25, 13);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Typ";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(1066, 6);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 11;
             // 
             // UcNieruchomosci
             // 
@@ -175,7 +175,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
             this.Name = "UcNieruchomosci";
-            this.Size = new System.Drawing.Size(1529, 1072);
+            this.Size = new System.Drawing.Size(1529, 848);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

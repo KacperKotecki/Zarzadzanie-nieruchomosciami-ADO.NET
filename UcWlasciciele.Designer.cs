@@ -30,6 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -39,10 +43,6 @@
             this.lb_wlasciciele = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -66,6 +66,38 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1522, 36);
             this.panel1.TabIndex = 2;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(1024, 10);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(32, 13);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Email";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(1071, 10);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(145, 20);
+            this.textBox5.TabIndex = 10;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(787, 10);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(43, 13);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Telefon";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(834, 10);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(145, 20);
+            this.textBox4.TabIndex = 8;
             // 
             // label3
             // 
@@ -133,45 +165,13 @@
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView1.Location = new System.Drawing.Point(0, 36);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1522, 717);
+            this.dataGridView1.Size = new System.Drawing.Size(1522, 877);
             this.dataGridView1.TabIndex = 10;
             // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(787, 10);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 13);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Telefon";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(834, 10);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(145, 20);
-            this.textBox4.TabIndex = 8;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(1024, 10);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(32, 13);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Email";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(1071, 10);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(145, 20);
-            this.textBox5.TabIndex = 10;
             // 
             // UcWlasciciele
             // 

@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.lb_umowy = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -64,6 +64,55 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1459, 36);
             this.panel1.TabIndex = 4;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(1045, 11);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(95, 13);
+            this.label3.TabIndex = 19;
+            this.label3.Text = "Data Zakończenia";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(728, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(95, 13);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Data Rozpoczęcia";
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(1146, 7);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker2.TabIndex = 16;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(829, 6);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 15;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(500, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(77, 13);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Nieruchomości";
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(583, 4);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(121, 21);
+            this.comboBox3.TabIndex = 13;
             // 
             // label5
             // 
@@ -117,57 +166,8 @@
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView1.Location = new System.Drawing.Point(0, 36);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1459, 717);
+            this.dataGridView1.Size = new System.Drawing.Size(1459, 842);
             this.dataGridView1.TabIndex = 11;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(500, 7);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 13);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Nieruchomości";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(583, 4);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 21);
-            this.comboBox3.TabIndex = 13;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(829, 6);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 15;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(1146, 7);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker2.TabIndex = 16;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(728, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 13);
-            this.label2.TabIndex = 18;
-            this.label2.Text = "Data Rozpoczęcia";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(1045, 11);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 13);
-            this.label3.TabIndex = 19;
-            this.label3.Text = "Data Zakończenia";
             // 
             // UcUmowy
             // 
@@ -176,7 +176,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
             this.Name = "UcUmowy";
-            this.Size = new System.Drawing.Size(1459, 928);
+            this.Size = new System.Drawing.Size(1459, 878);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
