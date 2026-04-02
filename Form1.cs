@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.OleDb;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,10 +13,39 @@ namespace Zarzadzanie_nieruchomosciami_ADO.NET
 {
     public partial class Form1 : Form
     {
-        private string connectionString = @"Provider=SQLOLEDB;Data Source=PC\SQLEXPRESS;Initial Catalog=ZarzadzanieNieruchomosciami;Integrated Security=SSPI;";
+        private string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\zarzadzanie_nieruchomosciami.mdf;Integrated Security=True";
+        public DataSet dsWynajem = new DataSet("WynajemDS");
+
         public Form1()
         {
             InitializeComponent();
+            DodajBazeDanych();
+        }
+
+        private void DodajBazeDanych()
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    string[] tabele = { "Wlasciciele", "Najemcy", "Nieruchomosci", "UmowyNajmu", "Oplaty" };
+
+                    foreach (string nazwa in tabele)
+                    {
+                        SqlDataAdapter adp = new SqlDataAdapter($"SELECT * FROM {nazwa}", connection);
+                        adp.Fill(dsWynajem, nazwa); 
+                    }
+                }
+                catch (Exception ex)
+                {
+                   MessageBox.Show("Błąd inicjalizacji bazy: " + ex.Message);
+                }
+                finally
+                {
+                    connection.Close(); 
+                }
+            }
         }
 
         private void ZaladujWidok(UserControl nowyWidok)
@@ -50,8 +79,8 @@ namespace Zarzadzanie_nieruchomosciami_ADO.NET
 
         private void btnNieruchomosci_Click(object sender, EventArgs e)
         {
-            UcNieruchomosci widokNieruchomosci = new UcNieruchomosci();
-            ZaladujWidok(widokNieruchomosci);
+            UcNieruchomosci widok = new UcNieruchomosci(this);
+            ZaladujWidok(widok);
         }
 
         private void btnUmowy_Click(object sender, EventArgs e)
