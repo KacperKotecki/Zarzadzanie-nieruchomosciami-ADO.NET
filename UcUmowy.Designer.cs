@@ -44,13 +44,16 @@
             this.cmb_wlascicel_umowa = new System.Windows.Forms.ComboBox();
             this.lb_umowy = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView_umowa = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_umowa)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel1.Controls.Add(this.dataGridView_umowa);
             this.panel1.Controls.Add(this.btn_usun_umowe);
             this.panel1.Controls.Add(this.btn_edytuj_umowe);
             this.panel1.Controls.Add(this.btn_dodaj_umowe);
@@ -210,6 +213,14 @@
             this.dataGridView1.Size = new System.Drawing.Size(1459, 842);
             this.dataGridView1.TabIndex = 11;
             // 
+            // dataGridView_umowa
+            // 
+            this.dataGridView_umowa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_umowa.Location = new System.Drawing.Point(721, 58);
+            this.dataGridView_umowa.Name = "dataGridView_umowa";
+            this.dataGridView_umowa.Size = new System.Drawing.Size(431, 150);
+            this.dataGridView_umowa.TabIndex = 32;
+            // 
             // UcUmowy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -221,6 +232,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_umowa)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -243,5 +255,6 @@
         private System.Windows.Forms.Button btn_usun_umowe;
         private System.Windows.Forms.Button btn_edytuj_umowe;
         private System.Windows.Forms.Button btn_dodaj_umowe;
+        private System.Windows.Forms.DataGridView dataGridView_umowa;
     }
 }

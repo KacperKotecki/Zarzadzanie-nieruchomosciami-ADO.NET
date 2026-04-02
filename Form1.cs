@@ -68,7 +68,7 @@ namespace Zarzadzanie_nieruchomosciami_ADO.NET
 
         private void btnNajemcy_Click_1(object sender, EventArgs e)
         {
-            UcNajemcy widokNajemcow = new UcNajemcy();
+            UcNajemcy widokNajemcow = new UcNajemcy(this);
             ZaladujWidok(widokNajemcow);
         }
         private void btnWlasciciele_Click(object sender, EventArgs e)

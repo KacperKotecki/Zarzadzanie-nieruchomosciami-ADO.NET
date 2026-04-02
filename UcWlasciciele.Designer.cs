@@ -46,13 +46,16 @@
             this.lb_wlasciciele = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.dataGridView_wlasciciel = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_wlasciciel)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel1.Controls.Add(this.dataGridView_wlasciciel);
             this.panel1.Controls.Add(this.btn_usun_wlascicela);
             this.panel1.Controls.Add(this.btn_edytuj_wlasciela);
             this.panel1.Controls.Add(this.btn_dodaj_wlascicela);
@@ -214,6 +217,14 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // dataGridView_wlasciciel
+            // 
+            this.dataGridView_wlasciciel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_wlasciciel.Location = new System.Drawing.Point(692, 27);
+            this.dataGridView_wlasciciel.Name = "dataGridView_wlasciciel";
+            this.dataGridView_wlasciciel.Size = new System.Drawing.Size(417, 150);
+            this.dataGridView_wlasciciel.TabIndex = 32;
+            // 
             // UcWlasciciele
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -225,6 +236,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_wlasciciel)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -248,5 +260,6 @@
         private System.Windows.Forms.Button btn_usun_wlascicela;
         private System.Windows.Forms.Button btn_edytuj_wlasciela;
         private System.Windows.Forms.Button btn_dodaj_wlascicela;
+        private System.Windows.Forms.DataGridView dataGridView_wlasciciel;
     }
 }

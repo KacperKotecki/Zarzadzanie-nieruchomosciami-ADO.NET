@@ -45,13 +45,16 @@
             this.cmb_umowa_oplaty = new System.Windows.Forms.ComboBox();
             this.lb_oplaty = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView_oplaty = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_oplaty)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel1.Controls.Add(this.dataGridView_oplaty);
             this.panel1.Controls.Add(this.btn_usun_oplate);
             this.panel1.Controls.Add(this.btn_edytuj_oplate);
             this.panel1.Controls.Add(this.btn_dodaj_oplate);
@@ -218,6 +221,14 @@
             this.dataGridView1.Size = new System.Drawing.Size(1474, 808);
             this.dataGridView1.TabIndex = 12;
             // 
+            // dataGridView_oplaty
+            // 
+            this.dataGridView_oplaty.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_oplaty.Location = new System.Drawing.Point(687, 50);
+            this.dataGridView_oplaty.Name = "dataGridView_oplaty";
+            this.dataGridView_oplaty.Size = new System.Drawing.Size(441, 213);
+            this.dataGridView_oplaty.TabIndex = 29;
+            // 
             // UcOplaty
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -230,6 +241,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_oplaty)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -253,5 +265,6 @@
         private System.Windows.Forms.Button btn_usun_oplate;
         private System.Windows.Forms.Button btn_edytuj_oplate;
         private System.Windows.Forms.Button btn_dodaj_oplate;
+        private System.Windows.Forms.DataGridView dataGridView_oplaty;
     }
 }

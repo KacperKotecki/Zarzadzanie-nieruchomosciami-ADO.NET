@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dataGridView_najemcy = new System.Windows.Forms.DataGridView();
             this.btn_usun_najemce = new System.Windows.Forms.Button();
             this.btn_edytuj_najemce = new System.Windows.Forms.Button();
             this.btn_dodaj_niajemce = new System.Windows.Forms.Button();
@@ -44,11 +45,13 @@
             this.TXT_IMIE_NAJEMCY = new System.Windows.Forms.TextBox();
             this.lb_Najemcy = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_najemcy)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel2.Controls.Add(this.dataGridView_najemcy);
             this.panel2.Controls.Add(this.btn_usun_najemce);
             this.panel2.Controls.Add(this.btn_edytuj_najemce);
             this.panel2.Controls.Add(this.btn_dodaj_niajemce);
@@ -69,27 +72,37 @@
             this.panel2.Size = new System.Drawing.Size(1360, 524);
             this.panel2.TabIndex = 6;
             // 
+            // dataGridView_najemcy
+            // 
+            this.dataGridView_najemcy.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_najemcy.Location = new System.Drawing.Point(444, 68);
+            this.dataGridView_najemcy.Name = "dataGridView_najemcy";
+            this.dataGridView_najemcy.Size = new System.Drawing.Size(771, 205);
+            this.dataGridView_najemcy.TabIndex = 20;
+            // 
             // btn_usun_najemce
             // 
             this.btn_usun_najemce.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btn_usun_najemce.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
-            this.btn_usun_najemce.Location = new System.Drawing.Point(902, 297);
+            this.btn_usun_najemce.Location = new System.Drawing.Point(829, 297);
             this.btn_usun_najemce.Name = "btn_usun_najemce";
             this.btn_usun_najemce.Size = new System.Drawing.Size(201, 80);
             this.btn_usun_najemce.TabIndex = 19;
             this.btn_usun_najemce.Text = "Usuń Najemce";
             this.btn_usun_najemce.UseVisualStyleBackColor = false;
+            this.btn_usun_najemce.Click += new System.EventHandler(this.btn_usun_najemce_Click);
             // 
             // btn_edytuj_najemce
             // 
             this.btn_edytuj_najemce.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.btn_edytuj_najemce.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
-            this.btn_edytuj_najemce.Location = new System.Drawing.Point(686, 297);
+            this.btn_edytuj_najemce.Location = new System.Drawing.Point(613, 297);
             this.btn_edytuj_najemce.Name = "btn_edytuj_najemce";
             this.btn_edytuj_najemce.Size = new System.Drawing.Size(201, 80);
             this.btn_edytuj_najemce.TabIndex = 18;
             this.btn_edytuj_najemce.Text = "Edytuj najemce";
             this.btn_edytuj_najemce.UseVisualStyleBackColor = false;
+            this.btn_edytuj_najemce.Click += new System.EventHandler(this.btn_edytuj_najemce_Click);
             // 
             // btn_dodaj_niajemce
             // 
@@ -103,6 +116,7 @@
             this.btn_dodaj_niajemce.TabIndex = 17;
             this.btn_dodaj_niajemce.Text = "Dodaj Najemce";
             this.btn_dodaj_niajemce.UseVisualStyleBackColor = false;
+            this.btn_dodaj_niajemce.Click += new System.EventHandler(this.btn_dodaj_niajemce_Click);
             // 
             // label6
             // 
@@ -203,6 +217,7 @@
             this.Size = new System.Drawing.Size(1360, 764);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_najemcy)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -224,5 +239,6 @@
         private System.Windows.Forms.Button btn_usun_najemce;
         private System.Windows.Forms.Button btn_edytuj_najemce;
         private System.Windows.Forms.Button btn_dodaj_niajemce;
+        private System.Windows.Forms.DataGridView dataGridView_najemcy;
     }
 }
