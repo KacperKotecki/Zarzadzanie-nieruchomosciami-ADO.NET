@@ -16,5 +16,7 @@ namespace Zarzadzanie_nieruchomosciami_ADO.NET
         {
             InitializeComponent();
         }
+
+
     }
 }

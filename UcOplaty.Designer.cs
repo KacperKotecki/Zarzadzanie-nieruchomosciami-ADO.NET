@@ -29,17 +29,20 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_usun_oplate = new System.Windows.Forms.Button();
+            this.btn_edytuj_oplate = new System.Windows.Forms.Button();
+            this.btn_dodaj_oplate = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.txt_prad_oplaty = new System.Windows.Forms.TextBox();
+            this.cmb_status_oplaty = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_woda_oplaty = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.txt_czynsz_oplaty = new System.Windows.Forms.TextBox();
+            this.dtp_data_oplaty = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmb_umowa_oplaty = new System.Windows.Forms.ComboBox();
             this.lb_oplaty = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
@@ -49,28 +52,66 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel1.Controls.Add(this.btn_usun_oplate);
+            this.panel1.Controls.Add(this.btn_edytuj_oplate);
+            this.panel1.Controls.Add(this.btn_dodaj_oplate);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.comboBox2);
+            this.panel1.Controls.Add(this.txt_prad_oplaty);
+            this.panel1.Controls.Add(this.cmb_status_oplaty);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txt_woda_oplaty);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.dateTimePicker3);
+            this.panel1.Controls.Add(this.txt_czynsz_oplaty);
+            this.panel1.Controls.Add(this.dtp_data_oplaty);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.cmb_umowa_oplaty);
             this.panel1.Controls.Add(this.lb_oplaty);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1474, 36);
+            this.panel1.Size = new System.Drawing.Size(1474, 432);
             this.panel1.TabIndex = 5;
+            // 
+            // btn_usun_oplate
+            // 
+            this.btn_usun_oplate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btn_usun_oplate.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
+            this.btn_usun_oplate.Location = new System.Drawing.Point(916, 294);
+            this.btn_usun_oplate.Name = "btn_usun_oplate";
+            this.btn_usun_oplate.Size = new System.Drawing.Size(201, 80);
+            this.btn_usun_oplate.TabIndex = 28;
+            this.btn_usun_oplate.Text = "Usuń Opłate";
+            this.btn_usun_oplate.UseVisualStyleBackColor = false;
+            // 
+            // btn_edytuj_oplate
+            // 
+            this.btn_edytuj_oplate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btn_edytuj_oplate.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
+            this.btn_edytuj_oplate.Location = new System.Drawing.Point(700, 294);
+            this.btn_edytuj_oplate.Name = "btn_edytuj_oplate";
+            this.btn_edytuj_oplate.Size = new System.Drawing.Size(201, 80);
+            this.btn_edytuj_oplate.TabIndex = 27;
+            this.btn_edytuj_oplate.Text = "Edytuj Opłate";
+            this.btn_edytuj_oplate.UseVisualStyleBackColor = false;
+            // 
+            // btn_dodaj_oplate
+            // 
+            this.btn_dodaj_oplate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btn_dodaj_oplate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_dodaj_oplate.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
+            this.btn_dodaj_oplate.Location = new System.Drawing.Point(118, 294);
+            this.btn_dodaj_oplate.MinimumSize = new System.Drawing.Size(100, 80);
+            this.btn_dodaj_oplate.Name = "btn_dodaj_oplate";
+            this.btn_dodaj_oplate.Size = new System.Drawing.Size(354, 80);
+            this.btn_dodaj_oplate.TabIndex = 26;
+            this.btn_dodaj_oplate.Text = "Dodaj Opłate";
+            this.btn_dodaj_oplate.UseVisualStyleBackColor = false;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(946, 11);
+            this.label5.Location = new System.Drawing.Point(91, 132);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(37, 13);
             this.label5.TabIndex = 25;
@@ -79,82 +120,82 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(732, 8);
+            this.label1.Location = new System.Drawing.Point(102, 103);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(29, 13);
             this.label1.TabIndex = 23;
             this.label1.Text = "Prąd";
             // 
-            // textBox3
+            // txt_prad_oplaty
             // 
-            this.textBox3.Location = new System.Drawing.Point(769, 8);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(145, 20);
-            this.textBox3.TabIndex = 22;
+            this.txt_prad_oplaty.Location = new System.Drawing.Point(139, 103);
+            this.txt_prad_oplaty.Name = "txt_prad_oplaty";
+            this.txt_prad_oplaty.Size = new System.Drawing.Size(145, 20);
+            this.txt_prad_oplaty.TabIndex = 22;
             // 
-            // comboBox2
+            // cmb_status_oplaty
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(994, 8);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 24;
+            this.cmb_status_oplaty.FormattingEnabled = true;
+            this.cmb_status_oplaty.Location = new System.Drawing.Point(139, 129);
+            this.cmb_status_oplaty.Name = "cmb_status_oplaty";
+            this.cmb_status_oplaty.Size = new System.Drawing.Size(121, 21);
+            this.cmb_status_oplaty.TabIndex = 24;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(513, 8);
+            this.label2.Location = new System.Drawing.Point(102, 77);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(36, 13);
             this.label2.TabIndex = 21;
             this.label2.Text = "Woda";
             // 
-            // textBox1
+            // txt_woda_oplaty
             // 
-            this.textBox1.Location = new System.Drawing.Point(550, 8);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(145, 20);
-            this.textBox1.TabIndex = 20;
+            this.txt_woda_oplaty.Location = new System.Drawing.Point(139, 77);
+            this.txt_woda_oplaty.Name = "txt_woda_oplaty";
+            this.txt_woda_oplaty.Size = new System.Drawing.Size(145, 20);
+            this.txt_woda_oplaty.TabIndex = 20;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(294, 8);
+            this.label6.Location = new System.Drawing.Point(93, 41);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(40, 13);
             this.label6.TabIndex = 7;
             this.label6.Text = "Czynsz";
             // 
-            // textBox2
+            // txt_czynsz_oplaty
             // 
-            this.textBox2.Location = new System.Drawing.Point(340, 8);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(145, 20);
-            this.textBox2.TabIndex = 6;
+            this.txt_czynsz_oplaty.Location = new System.Drawing.Point(139, 41);
+            this.txt_czynsz_oplaty.Name = "txt_czynsz_oplaty";
+            this.txt_czynsz_oplaty.Size = new System.Drawing.Size(145, 20);
+            this.txt_czynsz_oplaty.TabIndex = 6;
             // 
-            // dateTimePicker3
+            // dtp_data_oplaty
             // 
-            this.dateTimePicker3.Location = new System.Drawing.Point(1034, 27);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(38, 20);
-            this.dateTimePicker3.TabIndex = 17;
+            this.dtp_data_oplaty.Location = new System.Drawing.Point(139, 156);
+            this.dtp_data_oplaty.Name = "dtp_data_oplaty";
+            this.dtp_data_oplaty.Size = new System.Drawing.Size(233, 20);
+            this.dtp_data_oplaty.TabIndex = 17;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(85, 7);
+            this.label4.Location = new System.Drawing.Point(91, 17);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(42, 13);
             this.label4.TabIndex = 10;
             this.label4.Text = "Umowy";
             // 
-            // comboBox1
+            // cmb_umowa_oplaty
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(133, 4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 8;
+            this.cmb_umowa_oplaty.FormattingEnabled = true;
+            this.cmb_umowa_oplaty.Location = new System.Drawing.Point(139, 14);
+            this.cmb_umowa_oplaty.Name = "cmb_umowa_oplaty";
+            this.cmb_umowa_oplaty.Size = new System.Drawing.Size(145, 21);
+            this.cmb_umowa_oplaty.TabIndex = 8;
             // 
             // lb_oplaty
             // 
@@ -172,7 +213,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Top;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 36);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 432);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1474, 808);
             this.dataGridView1.TabIndex = 12;
@@ -196,18 +237,21 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.DateTimePicker dtp_data_oplaty;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmb_umowa_oplaty;
         private System.Windows.Forms.Label lb_oplaty;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.TextBox txt_prad_oplaty;
+        private System.Windows.Forms.ComboBox cmb_status_oplaty;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_woda_oplaty;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_czynsz_oplaty;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btn_usun_oplate;
+        private System.Windows.Forms.Button btn_edytuj_oplate;
+        private System.Windows.Forms.Button btn_dodaj_oplate;
     }
 }

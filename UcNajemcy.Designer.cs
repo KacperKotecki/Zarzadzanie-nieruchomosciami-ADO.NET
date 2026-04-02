@@ -29,16 +29,19 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_usun_najemce = new System.Windows.Forms.Button();
+            this.btn_edytuj_najemce = new System.Windows.Forms.Button();
+            this.btn_dodaj_niajemce = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.TXT_EMAIL_NAJEMCY = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.TXT_TEL_NAJEMCY = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.TXT_PESEL_NAJEMCY = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.TXT_NAZWISKO_NAJEMCY = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TXT_IMIE_NAJEMCY = new System.Windows.Forms.TextBox();
             this.lb_Najemcy = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -46,22 +49,60 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel2.Controls.Add(this.btn_usun_najemce);
+            this.panel2.Controls.Add(this.btn_edytuj_najemce);
+            this.panel2.Controls.Add(this.btn_dodaj_niajemce);
             this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.textBox5);
+            this.panel2.Controls.Add(this.TXT_EMAIL_NAJEMCY);
             this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.textBox4);
+            this.panel2.Controls.Add(this.TXT_TEL_NAJEMCY);
             this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.textBox3);
+            this.panel2.Controls.Add(this.TXT_PESEL_NAJEMCY);
             this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.TXT_NAZWISKO_NAJEMCY);
             this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.TXT_IMIE_NAJEMCY);
             this.panel2.Controls.Add(this.lb_Najemcy);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1360, 524);
             this.panel2.TabIndex = 6;
+            // 
+            // btn_usun_najemce
+            // 
+            this.btn_usun_najemce.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btn_usun_najemce.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
+            this.btn_usun_najemce.Location = new System.Drawing.Point(902, 297);
+            this.btn_usun_najemce.Name = "btn_usun_najemce";
+            this.btn_usun_najemce.Size = new System.Drawing.Size(201, 80);
+            this.btn_usun_najemce.TabIndex = 19;
+            this.btn_usun_najemce.Text = "Usuń Najemce";
+            this.btn_usun_najemce.UseVisualStyleBackColor = false;
+            // 
+            // btn_edytuj_najemce
+            // 
+            this.btn_edytuj_najemce.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btn_edytuj_najemce.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
+            this.btn_edytuj_najemce.Location = new System.Drawing.Point(686, 297);
+            this.btn_edytuj_najemce.Name = "btn_edytuj_najemce";
+            this.btn_edytuj_najemce.Size = new System.Drawing.Size(201, 80);
+            this.btn_edytuj_najemce.TabIndex = 18;
+            this.btn_edytuj_najemce.Text = "Edytuj najemce";
+            this.btn_edytuj_najemce.UseVisualStyleBackColor = false;
+            // 
+            // btn_dodaj_niajemce
+            // 
+            this.btn_dodaj_niajemce.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btn_dodaj_niajemce.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_dodaj_niajemce.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
+            this.btn_dodaj_niajemce.Location = new System.Drawing.Point(104, 297);
+            this.btn_dodaj_niajemce.MinimumSize = new System.Drawing.Size(100, 80);
+            this.btn_dodaj_niajemce.Name = "btn_dodaj_niajemce";
+            this.btn_dodaj_niajemce.Size = new System.Drawing.Size(354, 80);
+            this.btn_dodaj_niajemce.TabIndex = 17;
+            this.btn_dodaj_niajemce.Text = "Dodaj Najemce";
+            this.btn_dodaj_niajemce.UseVisualStyleBackColor = false;
             // 
             // label6
             // 
@@ -72,12 +113,12 @@
             this.label6.TabIndex = 11;
             this.label6.Text = "Email";
             // 
-            // textBox5
+            // TXT_EMAIL_NAJEMCY
             // 
-            this.textBox5.Location = new System.Drawing.Point(142, 197);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(145, 20);
-            this.textBox5.TabIndex = 10;
+            this.TXT_EMAIL_NAJEMCY.Location = new System.Drawing.Point(142, 197);
+            this.TXT_EMAIL_NAJEMCY.Name = "TXT_EMAIL_NAJEMCY";
+            this.TXT_EMAIL_NAJEMCY.Size = new System.Drawing.Size(145, 20);
+            this.TXT_EMAIL_NAJEMCY.TabIndex = 10;
             // 
             // label7
             // 
@@ -88,12 +129,12 @@
             this.label7.TabIndex = 9;
             this.label7.Text = "Telefon";
             // 
-            // textBox4
+            // TXT_TEL_NAJEMCY
             // 
-            this.textBox4.Location = new System.Drawing.Point(142, 168);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(145, 20);
-            this.textBox4.TabIndex = 8;
+            this.TXT_TEL_NAJEMCY.Location = new System.Drawing.Point(142, 168);
+            this.TXT_TEL_NAJEMCY.Name = "TXT_TEL_NAJEMCY";
+            this.TXT_TEL_NAJEMCY.Size = new System.Drawing.Size(145, 20);
+            this.TXT_TEL_NAJEMCY.TabIndex = 8;
             // 
             // label8
             // 
@@ -104,12 +145,12 @@
             this.label8.TabIndex = 7;
             this.label8.Text = "PESEL";
             // 
-            // textBox3
+            // TXT_PESEL_NAJEMCY
             // 
-            this.textBox3.Location = new System.Drawing.Point(142, 134);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(145, 20);
-            this.textBox3.TabIndex = 6;
+            this.TXT_PESEL_NAJEMCY.Location = new System.Drawing.Point(142, 134);
+            this.TXT_PESEL_NAJEMCY.Name = "TXT_PESEL_NAJEMCY";
+            this.TXT_PESEL_NAJEMCY.Size = new System.Drawing.Size(145, 20);
+            this.TXT_PESEL_NAJEMCY.TabIndex = 6;
             // 
             // label9
             // 
@@ -120,12 +161,12 @@
             this.label9.TabIndex = 5;
             this.label9.Text = "Nazwisko";
             // 
-            // textBox2
+            // TXT_NAZWISKO_NAJEMCY
             // 
-            this.textBox2.Location = new System.Drawing.Point(142, 108);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(145, 20);
-            this.textBox2.TabIndex = 4;
+            this.TXT_NAZWISKO_NAJEMCY.Location = new System.Drawing.Point(142, 108);
+            this.TXT_NAZWISKO_NAJEMCY.Name = "TXT_NAZWISKO_NAJEMCY";
+            this.TXT_NAZWISKO_NAJEMCY.Size = new System.Drawing.Size(145, 20);
+            this.TXT_NAZWISKO_NAJEMCY.TabIndex = 4;
             // 
             // label10
             // 
@@ -136,12 +177,12 @@
             this.label10.TabIndex = 3;
             this.label10.Text = "Imię";
             // 
-            // textBox1
+            // TXT_IMIE_NAJEMCY
             // 
-            this.textBox1.Location = new System.Drawing.Point(142, 82);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(145, 20);
-            this.textBox1.TabIndex = 1;
+            this.TXT_IMIE_NAJEMCY.Location = new System.Drawing.Point(142, 82);
+            this.TXT_IMIE_NAJEMCY.Name = "TXT_IMIE_NAJEMCY";
+            this.TXT_IMIE_NAJEMCY.Size = new System.Drawing.Size(145, 20);
+            this.TXT_IMIE_NAJEMCY.TabIndex = 1;
             // 
             // lb_Najemcy
             // 
@@ -170,15 +211,18 @@
 
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox TXT_TEL_NAJEMCY;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox TXT_PESEL_NAJEMCY;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox TXT_NAZWISKO_NAJEMCY;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TXT_IMIE_NAJEMCY;
         private System.Windows.Forms.Label lb_Najemcy;
+        private System.Windows.Forms.TextBox TXT_EMAIL_NAJEMCY;
+        private System.Windows.Forms.Button btn_usun_najemce;
+        private System.Windows.Forms.Button btn_edytuj_najemce;
+        private System.Windows.Forms.Button btn_dodaj_niajemce;
     }
 }

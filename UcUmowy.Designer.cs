@@ -29,16 +29,19 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_usun_umowe = new System.Windows.Forms.Button();
+            this.btn_edytuj_umowe = new System.Windows.Forms.Button();
+            this.btn_dodaj_umowe = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtp_zakonczenie_umowa = new System.Windows.Forms.DateTimePicker();
+            this.dtp_rozpoczecie_umowa = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cmb_nieruchomosc_umowa = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cmb_najemca_umowa = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmb_wlascicel_umowa = new System.Windows.Forms.ComboBox();
             this.lb_umowy = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
@@ -48,27 +51,65 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel1.Controls.Add(this.btn_usun_umowe);
+            this.panel1.Controls.Add(this.btn_edytuj_umowe);
+            this.panel1.Controls.Add(this.btn_dodaj_umowe);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.dateTimePicker2);
-            this.panel1.Controls.Add(this.dateTimePicker1);
+            this.panel1.Controls.Add(this.dtp_zakonczenie_umowa);
+            this.panel1.Controls.Add(this.dtp_rozpoczecie_umowa);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.comboBox3);
+            this.panel1.Controls.Add(this.cmb_nieruchomosc_umowa);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.comboBox2);
+            this.panel1.Controls.Add(this.cmb_najemca_umowa);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.cmb_wlascicel_umowa);
             this.panel1.Controls.Add(this.lb_umowy);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1459, 36);
+            this.panel1.Size = new System.Drawing.Size(1459, 383);
             this.panel1.TabIndex = 4;
+            // 
+            // btn_usun_umowe
+            // 
+            this.btn_usun_umowe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btn_usun_umowe.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
+            this.btn_usun_umowe.Location = new System.Drawing.Point(937, 244);
+            this.btn_usun_umowe.Name = "btn_usun_umowe";
+            this.btn_usun_umowe.Size = new System.Drawing.Size(201, 80);
+            this.btn_usun_umowe.TabIndex = 31;
+            this.btn_usun_umowe.Text = "Usuń Umowe";
+            this.btn_usun_umowe.UseVisualStyleBackColor = false;
+            // 
+            // btn_edytuj_umowe
+            // 
+            this.btn_edytuj_umowe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btn_edytuj_umowe.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
+            this.btn_edytuj_umowe.Location = new System.Drawing.Point(721, 244);
+            this.btn_edytuj_umowe.Name = "btn_edytuj_umowe";
+            this.btn_edytuj_umowe.Size = new System.Drawing.Size(201, 80);
+            this.btn_edytuj_umowe.TabIndex = 30;
+            this.btn_edytuj_umowe.Text = "Edytuj Umowe";
+            this.btn_edytuj_umowe.UseVisualStyleBackColor = false;
+            // 
+            // btn_dodaj_umowe
+            // 
+            this.btn_dodaj_umowe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btn_dodaj_umowe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_dodaj_umowe.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
+            this.btn_dodaj_umowe.Location = new System.Drawing.Point(139, 244);
+            this.btn_dodaj_umowe.MinimumSize = new System.Drawing.Size(100, 80);
+            this.btn_dodaj_umowe.Name = "btn_dodaj_umowe";
+            this.btn_dodaj_umowe.Size = new System.Drawing.Size(354, 80);
+            this.btn_dodaj_umowe.TabIndex = 29;
+            this.btn_dodaj_umowe.Text = "Dodaj Umowe";
+            this.btn_dodaj_umowe.UseVisualStyleBackColor = false;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(1045, 11);
+            this.label3.Location = new System.Drawing.Point(54, 169);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(95, 13);
             this.label3.TabIndex = 19;
@@ -77,76 +118,76 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(728, 9);
+            this.label2.Location = new System.Drawing.Point(54, 142);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(95, 13);
             this.label2.TabIndex = 18;
             this.label2.Text = "Data Rozpoczęcia";
             // 
-            // dateTimePicker2
+            // dtp_zakonczenie_umowa
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(1146, 7);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker2.TabIndex = 16;
+            this.dtp_zakonczenie_umowa.Location = new System.Drawing.Point(155, 165);
+            this.dtp_zakonczenie_umowa.Name = "dtp_zakonczenie_umowa";
+            this.dtp_zakonczenie_umowa.Size = new System.Drawing.Size(200, 20);
+            this.dtp_zakonczenie_umowa.TabIndex = 16;
             // 
-            // dateTimePicker1
+            // dtp_rozpoczecie_umowa
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(829, 6);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 15;
+            this.dtp_rozpoczecie_umowa.Location = new System.Drawing.Point(155, 139);
+            this.dtp_rozpoczecie_umowa.Name = "dtp_rozpoczecie_umowa";
+            this.dtp_rozpoczecie_umowa.Size = new System.Drawing.Size(200, 20);
+            this.dtp_rozpoczecie_umowa.TabIndex = 15;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(500, 7);
+            this.label1.Location = new System.Drawing.Point(72, 115);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 13);
             this.label1.TabIndex = 14;
             this.label1.Text = "Nieruchomości";
             // 
-            // comboBox3
+            // cmb_nieruchomosc_umowa
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(583, 4);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 21);
-            this.comboBox3.TabIndex = 13;
+            this.cmb_nieruchomosc_umowa.FormattingEnabled = true;
+            this.cmb_nieruchomosc_umowa.Location = new System.Drawing.Point(155, 112);
+            this.cmb_nieruchomosc_umowa.Name = "cmb_nieruchomosc_umowa";
+            this.cmb_nieruchomosc_umowa.Size = new System.Drawing.Size(121, 21);
+            this.cmb_nieruchomosc_umowa.TabIndex = 13;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(299, 7);
+            this.label5.Location = new System.Drawing.Point(100, 86);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 13);
             this.label5.TabIndex = 12;
             this.label5.Text = "Najemca";
             // 
-            // comboBox2
+            // cmb_najemca_umowa
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(354, 6);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 11;
+            this.cmb_najemca_umowa.FormattingEnabled = true;
+            this.cmb_najemca_umowa.Location = new System.Drawing.Point(155, 85);
+            this.cmb_najemca_umowa.Name = "cmb_najemca_umowa";
+            this.cmb_najemca_umowa.Size = new System.Drawing.Size(121, 21);
+            this.cmb_najemca_umowa.TabIndex = 11;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(85, 7);
+            this.label4.Location = new System.Drawing.Point(92, 59);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(57, 13);
             this.label4.TabIndex = 10;
             this.label4.Text = "Właściciel";
             // 
-            // comboBox1
+            // cmb_wlascicel_umowa
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(148, 6);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 8;
+            this.cmb_wlascicel_umowa.FormattingEnabled = true;
+            this.cmb_wlascicel_umowa.Location = new System.Drawing.Point(155, 58);
+            this.cmb_wlascicel_umowa.Name = "cmb_wlascicel_umowa";
+            this.cmb_wlascicel_umowa.Size = new System.Drawing.Size(121, 21);
+            this.cmb_wlascicel_umowa.TabIndex = 8;
             // 
             // lb_umowy
             // 
@@ -164,7 +205,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Top;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 36);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 383);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1459, 842);
             this.dataGridView1.TabIndex = 11;
@@ -188,16 +229,19 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cmb_najemca_umowa;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmb_wlascicel_umowa;
         private System.Windows.Forms.Label lb_umowy;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtp_zakonczenie_umowa;
+        private System.Windows.Forms.DateTimePicker dtp_rozpoczecie_umowa;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cmb_nieruchomosc_umowa;
+        private System.Windows.Forms.Button btn_usun_umowe;
+        private System.Windows.Forms.Button btn_edytuj_umowe;
+        private System.Windows.Forms.Button btn_dodaj_umowe;
     }
 }
