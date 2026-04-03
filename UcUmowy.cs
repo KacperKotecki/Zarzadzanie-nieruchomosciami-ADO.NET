@@ -12,9 +12,11 @@ namespace Zarzadzanie_nieruchomosciami_ADO.NET
 {
     public partial class UcUmowy : UserControl
     {
-        public UcUmowy()
+        private Form1 mainForm;
+        public UcUmowy(Form1 parent)
         {
             InitializeComponent();
+            this.mainForm = parent;
         }
 
     }

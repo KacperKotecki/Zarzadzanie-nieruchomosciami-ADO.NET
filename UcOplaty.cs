@@ -12,9 +12,11 @@ namespace Zarzadzanie_nieruchomosciami_ADO.NET
 {
     public partial class UcOplaty : UserControl
     {
-        public UcOplaty()
+        private Form1 mainForm;
+        public UcOplaty(Form1 parent)
         {
             InitializeComponent();
+
         }
     }
 }

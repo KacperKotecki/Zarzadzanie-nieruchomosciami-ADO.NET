@@ -86,13 +86,13 @@ namespace Zarzadzanie_nieruchomosciami_ADO.NET
 
         private void btnUmowy_Click(object sender, EventArgs e)
         {
-            UcUmowy widokUmow = new UcUmowy();
+            UcUmowy widokUmow = new UcUmowy(this);
             ZaladujWidok(widokUmow);
         }
 
         private void btnOplaty_Click(object sender, EventArgs e)
         {
-            UcOplaty widokOplat = new UcOplaty();
+            UcOplaty widokOplat = new UcOplaty(this);
             ZaladujWidok(widokOplat);
         }
 
