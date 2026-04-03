@@ -20,6 +20,7 @@ namespace Zarzadzanie_nieruchomosciami_ADO.NET
         {
             InitializeComponent();
             DodajBazeDanych();
+            btnPulpit_Click(null, null); // udawane klikniecie w przycisk pulpitu, zeby od razu pokazal sie pulpit
         }
 
         private void DodajBazeDanych()
@@ -62,7 +63,7 @@ namespace Zarzadzanie_nieruchomosciami_ADO.NET
 
         private void btnPulpit_Click(object sender, EventArgs e)
         {
-            UcPulpit widokPulpitu = new UcPulpit();
+            UcPulpit widokPulpitu = new UcPulpit(this);
             ZaladujWidok(widokPulpitu);
         }
 
@@ -73,7 +74,7 @@ namespace Zarzadzanie_nieruchomosciami_ADO.NET
         }
         private void btnWlasciciele_Click(object sender, EventArgs e)
         {
-            UcWlasciciele widokWlascicieli = new UcWlasciciele();
+            UcWlasciciele widokWlascicieli = new UcWlasciciele(this);
             ZaladujWidok(widokWlascicieli);
         }
 

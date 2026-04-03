@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dataGridView_wlasciciel = new System.Windows.Forms.DataGridView();
             this.btn_usun_wlascicela = new System.Windows.Forms.Button();
             this.btn_edytuj_wlasciela = new System.Windows.Forms.Button();
             this.btn_dodaj_wlascicela = new System.Windows.Forms.Button();
@@ -46,15 +47,18 @@
             this.lb_wlasciciele = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.dataGridView_wlasciciel = new System.Windows.Forms.DataGridView();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txt_bank_wlascicela = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_wlasciciel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.txt_bank_wlascicela);
             this.panel1.Controls.Add(this.dataGridView_wlasciciel);
             this.panel1.Controls.Add(this.btn_usun_wlascicela);
             this.panel1.Controls.Add(this.btn_edytuj_wlasciela);
@@ -73,48 +77,59 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1522, 321);
+            this.panel1.Size = new System.Drawing.Size(1522, 492);
             this.panel1.TabIndex = 2;
+            // 
+            // dataGridView_wlasciciel
+            // 
+            this.dataGridView_wlasciciel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_wlasciciel.Location = new System.Drawing.Point(450, 32);
+            this.dataGridView_wlasciciel.Name = "dataGridView_wlasciciel";
+            this.dataGridView_wlasciciel.Size = new System.Drawing.Size(765, 270);
+            this.dataGridView_wlasciciel.TabIndex = 32;
             // 
             // btn_usun_wlascicela
             // 
             this.btn_usun_wlascicela.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btn_usun_wlascicela.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
-            this.btn_usun_wlascicela.Location = new System.Drawing.Point(908, 199);
+            this.btn_usun_wlascicela.Location = new System.Drawing.Point(837, 325);
             this.btn_usun_wlascicela.Name = "btn_usun_wlascicela";
             this.btn_usun_wlascicela.Size = new System.Drawing.Size(201, 80);
             this.btn_usun_wlascicela.TabIndex = 31;
             this.btn_usun_wlascicela.Text = "Usuń Właścicela";
             this.btn_usun_wlascicela.UseVisualStyleBackColor = false;
+            this.btn_usun_wlascicela.Click += new System.EventHandler(this.btn_usun_wlascicela_Click);
             // 
             // btn_edytuj_wlasciela
             // 
             this.btn_edytuj_wlasciela.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.btn_edytuj_wlasciela.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
-            this.btn_edytuj_wlasciela.Location = new System.Drawing.Point(692, 199);
+            this.btn_edytuj_wlasciela.Location = new System.Drawing.Point(610, 325);
             this.btn_edytuj_wlasciela.Name = "btn_edytuj_wlasciela";
             this.btn_edytuj_wlasciela.Size = new System.Drawing.Size(201, 80);
             this.btn_edytuj_wlasciela.TabIndex = 30;
             this.btn_edytuj_wlasciela.Text = "Edytuj Właściciela";
             this.btn_edytuj_wlasciela.UseVisualStyleBackColor = false;
+            this.btn_edytuj_wlasciela.Click += new System.EventHandler(this.btn_edytuj_wlasciela_Click);
             // 
             // btn_dodaj_wlascicela
             // 
             this.btn_dodaj_wlascicela.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btn_dodaj_wlascicela.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btn_dodaj_wlascicela.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
-            this.btn_dodaj_wlascicela.Location = new System.Drawing.Point(110, 199);
+            this.btn_dodaj_wlascicela.Location = new System.Drawing.Point(53, 325);
             this.btn_dodaj_wlascicela.MinimumSize = new System.Drawing.Size(100, 80);
             this.btn_dodaj_wlascicela.Name = "btn_dodaj_wlascicela";
             this.btn_dodaj_wlascicela.Size = new System.Drawing.Size(354, 80);
             this.btn_dodaj_wlascicela.TabIndex = 29;
             this.btn_dodaj_wlascicela.Text = "Dodaj Właściciela";
             this.btn_dodaj_wlascicela.UseVisualStyleBackColor = false;
+            this.btn_dodaj_wlascicela.Click += new System.EventHandler(this.btn_dodaj_wlascicela_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(119, 114);
+            this.label5.Location = new System.Drawing.Point(127, 157);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(32, 13);
             this.label5.TabIndex = 11;
@@ -122,7 +137,7 @@
             // 
             // txt_email_wlasciciela
             // 
-            this.txt_email_wlasciciela.Location = new System.Drawing.Point(166, 114);
+            this.txt_email_wlasciciela.Location = new System.Drawing.Point(174, 157);
             this.txt_email_wlasciciela.Name = "txt_email_wlasciciela";
             this.txt_email_wlasciciela.Size = new System.Drawing.Size(145, 20);
             this.txt_email_wlasciciela.TabIndex = 10;
@@ -130,7 +145,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(119, 88);
+            this.label4.Location = new System.Drawing.Point(127, 131);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 13);
             this.label4.TabIndex = 9;
@@ -138,7 +153,7 @@
             // 
             // txt_tel_wlasciciela
             // 
-            this.txt_tel_wlasciciela.Location = new System.Drawing.Point(166, 88);
+            this.txt_tel_wlasciciela.Location = new System.Drawing.Point(174, 131);
             this.txt_tel_wlasciciela.Name = "txt_tel_wlasciciela";
             this.txt_tel_wlasciciela.Size = new System.Drawing.Size(145, 20);
             this.txt_tel_wlasciciela.TabIndex = 8;
@@ -146,7 +161,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(119, 62);
+            this.label3.Location = new System.Drawing.Point(127, 105);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(41, 13);
             this.label3.TabIndex = 7;
@@ -154,7 +169,7 @@
             // 
             // txt_PESEL_wlasciciela
             // 
-            this.txt_PESEL_wlasciciela.Location = new System.Drawing.Point(166, 62);
+            this.txt_PESEL_wlasciciela.Location = new System.Drawing.Point(174, 105);
             this.txt_PESEL_wlasciciela.Name = "txt_PESEL_wlasciciela";
             this.txt_PESEL_wlasciciela.Size = new System.Drawing.Size(145, 20);
             this.txt_PESEL_wlasciciela.TabIndex = 6;
@@ -162,7 +177,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(107, 36);
+            this.label2.Location = new System.Drawing.Point(115, 79);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 13);
             this.label2.TabIndex = 5;
@@ -170,7 +185,7 @@
             // 
             // txt_nazwisko_wlasciciela
             // 
-            this.txt_nazwisko_wlasciciela.Location = new System.Drawing.Point(166, 36);
+            this.txt_nazwisko_wlasciciela.Location = new System.Drawing.Point(174, 79);
             this.txt_nazwisko_wlasciciela.Name = "txt_nazwisko_wlasciciela";
             this.txt_nazwisko_wlasciciela.Size = new System.Drawing.Size(145, 20);
             this.txt_nazwisko_wlasciciela.TabIndex = 4;
@@ -178,7 +193,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(125, 10);
+            this.label1.Location = new System.Drawing.Point(133, 53);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(26, 13);
             this.label1.TabIndex = 3;
@@ -186,7 +201,7 @@
             // 
             // txt_imie_wlasciciela
             // 
-            this.txt_imie_wlasciciela.Location = new System.Drawing.Point(166, 10);
+            this.txt_imie_wlasciciela.Location = new System.Drawing.Point(174, 53);
             this.txt_imie_wlasciciela.Name = "txt_imie_wlasciciela";
             this.txt_imie_wlasciciela.Size = new System.Drawing.Size(145, 20);
             this.txt_imie_wlasciciela.TabIndex = 1;
@@ -207,7 +222,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Top;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 321);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 492);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1522, 877);
             this.dataGridView1.TabIndex = 10;
@@ -217,13 +232,21 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // dataGridView_wlasciciel
+            // label6
             // 
-            this.dataGridView_wlasciciel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_wlasciciel.Location = new System.Drawing.Point(692, 27);
-            this.dataGridView_wlasciciel.Name = "dataGridView_wlasciciel";
-            this.dataGridView_wlasciciel.Size = new System.Drawing.Size(417, 150);
-            this.dataGridView_wlasciciel.TabIndex = 32;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(115, 183);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(49, 13);
+            this.label6.TabIndex = 34;
+            this.label6.Text = "nr. konta";
+            // 
+            // txt_bank_wlascicela
+            // 
+            this.txt_bank_wlascicela.Location = new System.Drawing.Point(174, 183);
+            this.txt_bank_wlascicela.Name = "txt_bank_wlascicela";
+            this.txt_bank_wlascicela.Size = new System.Drawing.Size(145, 20);
+            this.txt_bank_wlascicela.TabIndex = 33;
             // 
             // UcWlasciciele
             // 
@@ -235,8 +258,8 @@
             this.Size = new System.Drawing.Size(1522, 902);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_wlasciciel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -261,5 +284,7 @@
         private System.Windows.Forms.Button btn_edytuj_wlasciela;
         private System.Windows.Forms.Button btn_dodaj_wlascicela;
         private System.Windows.Forms.DataGridView dataGridView_wlasciciel;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txt_bank_wlascicela;
     }
 }

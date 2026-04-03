@@ -75,6 +75,7 @@
             this.btn_zatwierdz_pulpit.TabIndex = 7;
             this.btn_zatwierdz_pulpit.Text = "Potwierdź";
             this.btn_zatwierdz_pulpit.UseVisualStyleBackColor = false;
+            this.btn_zatwierdz_pulpit.Click += new System.EventHandler(this.btn_zatwierdz_pulpit_Click);
             // 
             // cmb_kategoria_pulpit
             // 
