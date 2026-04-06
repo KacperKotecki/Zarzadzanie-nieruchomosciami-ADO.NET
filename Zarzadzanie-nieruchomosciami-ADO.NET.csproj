@@ -155,13 +155,7 @@
   <ItemGroup>
     <Content Include="dodawanie_danych.sql" />
     <Content Include="tworzenie_bazy.sql" />
-    <Content Include="zarzadzanie_nieruchomosciami.mdf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="zarzadzanie_nieruchomosciami_log.ldf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <DependentUpon>zarzadzanie_nieruchomosciami.mdf</DependentUpon>
-    </Content>
+
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

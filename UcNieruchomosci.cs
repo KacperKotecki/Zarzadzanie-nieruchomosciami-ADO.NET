@@ -57,7 +57,7 @@ namespace Zarzadzanie_nieruchomosciami_ADO.NET
 
         private void ZapiszZmiany()
         {
-            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\zarzadzanie_nieruchomosciami.mdf;Integrated Security=True";
+            string connectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=zarzadzanie_nieruchomosciami;Integrated Security=True";
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 adp = new SqlDataAdapter("SELECT * FROM Nieruchomosci", conn);
