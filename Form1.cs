@@ -13,7 +13,8 @@ namespace Zarzadzanie_nieruchomosciami_ADO.NET
 {
     public partial class Form1 : Form
     {
-        private string connectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=zarzadzanie_nieruchomosciami;Integrated Security=True";
+        
+        public static string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\baza.mdf;Integrated Security=True";
         public DataSet dsWynajem = new DataSet("WynajemDS");
 
         public Form1()

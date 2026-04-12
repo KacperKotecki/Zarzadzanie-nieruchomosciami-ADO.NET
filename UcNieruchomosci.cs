@@ -57,8 +57,7 @@ namespace Zarzadzanie_nieruchomosciami_ADO.NET
 
         private void ZapiszZmiany()
         {
-            string connectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=zarzadzanie_nieruchomosciami;Integrated Security=True";
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            using (SqlConnection conn = new SqlConnection(Form1.connectionString))
             {
                 adp = new SqlDataAdapter("SELECT * FROM Nieruchomosci", conn);
                 SqlCommandBuilder builder = new SqlCommandBuilder(adp);

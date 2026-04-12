@@ -8,7 +8,7 @@ namespace Zarzadzanie_nieruchomosciami_ADO.NET
 {
     public partial class UcOplaty : UserControl
     {
-        private const string ConnectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=zarzadzanie_nieruchomosciami;Integrated Security=True";
+       
 
         private Form1 mainForm;
         private BindingSource bsOplaty = new BindingSource();
@@ -72,7 +72,7 @@ namespace Zarzadzanie_nieruchomosciami_ADO.NET
 
         private void ZapiszZmiany()
         {
-            using (SqlConnection conn = new SqlConnection(ConnectionString))
+            using (SqlConnection conn = new SqlConnection(Form1.connectionString))
             using (SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM Oplaty", conn))
             {
                 SqlCommandBuilder builder = new SqlCommandBuilder(adapter);
