@@ -1,3 +1,6 @@
+USE Zarzadanie_Nieruchomosciami;
+GO
+
 INSERT INTO Wlasciciele (Imie, Nazwisko, Pesel, Telefon, Email, NumerKontaBankowego) VALUES
 ('Jan', 'Kowalski', '85010112345', '501101202', 'j.kowalski@mail.pl', '12102030405060708090123456'),
 ('Anna', 'Nowak', '90020223456', '602202303', 'a.nowak@mail.pl', '98102030405060708090123456'),
@@ -93,7 +96,6 @@ INSERT INTO Nieruchomosci (IdWlasciciela, Miasto, Ulica, LiczbaPokoi, TypNieruch
 (25, 'Dąbrowa Górnicza', 'Sobieskiego 20', 3, 'Biuro'),
 (26, 'Płock', 'Tumska 3', 1, 'Pokoj'),
 (27, 'Elbląg', 'Stary Rynek 5', 2, 'Mieszkanie');
-
 
 INSERT INTO UmowyNajmu (IdNieruchomosci, IdNajemcy, IdWlasciciela, DataRozpoczecia, DataZakonczenia) VALUES
 (1, 1, 1, '2024-01-01', '2024-12-31'),

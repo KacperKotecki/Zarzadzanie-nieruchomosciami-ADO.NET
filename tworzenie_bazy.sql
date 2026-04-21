@@ -1,3 +1,9 @@
+﻿CREATE DATABASE Zarzadanie_Nieruchomosciami;
+GO
+
+USE Zarzadanie_Nieruchomosciami;
+GO
+
 ﻿CREATE TABLE Wlasciciele (
     IdWlasciciela INT IDENTITY(1,1) PRIMARY KEY,
     Imie NVARCHAR(50) NOT NULL,
@@ -55,5 +61,3 @@ CREATE TABLE Oplaty (
     CONSTRAINT FK_Oplaty_UmowyNajmu FOREIGN KEY (IdUmowyNajmu) 
         REFERENCES UmowyNajmu(IdUmowyNajmu) ON DELETE CASCADE
 );
-
-
