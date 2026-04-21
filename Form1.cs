@@ -14,7 +14,8 @@ namespace Zarzadzanie_nieruchomosciami_ADO.NET
     public partial class Form1 : Form
     {
         
-        public static string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\baza.mdf;Integrated Security=True";
+        public static string connectionString = @"Server=DELL\SQLEXPRESS;Database=Zarzadanie_Nieruchomosciami;Integrated Security=True;TrustServerCertificate=True;";
+
         public DataSet dsWynajem = new DataSet("WynajemDS");
 
         public Form1()

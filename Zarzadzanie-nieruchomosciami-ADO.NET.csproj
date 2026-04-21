@@ -153,13 +153,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="baza.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="baza_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>baza.mdf</DependentUpon>
-    </Content>
     <Content Include="dodawanie_danych.sql" />
     <Content Include="tworzenie_bazy.sql" />
   </ItemGroup>
