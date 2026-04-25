@@ -22,6 +22,14 @@ namespace Zarzadzanie_nieruchomosciami_ADO.NET
 
         private void InicjalizujWidok()
         {
+            DataTable dtOplaty = mainForm.dsWynajem.Tables["Oplaty"];
+            if (!dtOplaty.Columns.Contains("Suma"))
+            {
+                DataColumn colSuma = new DataColumn("Suma", typeof(decimal));
+                colSuma.Expression = "Czynsz + Woda + Prad";
+                dtOplaty.Columns.Add(colSuma);
+            }
+
             bsOplaty.DataSource = mainForm.dsWynajem;
             bsOplaty.DataMember = "Oplaty";
             dataGridView_oplaty.DataSource = bsOplaty;
