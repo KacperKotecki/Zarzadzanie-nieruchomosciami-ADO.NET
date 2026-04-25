@@ -64,13 +64,20 @@ namespace Zarzadzanie_nieruchomosciami_ADO.NET
             cmb_umowa_oplaty.DisplayMember = "OpisUmowy";
             cmb_umowa_oplaty.ValueMember = "IdUmowyNajmu";
 
-            cmb_status_oplaty.Items.Clear();
-            cmb_status_oplaty.Items.AddRange(new string[] { "Oczekujaca", "Zaplacona", "Opozniona" });
+            string[] statusy = { "Oczekujaca", "Zaplacona", "Opozniona" };
+            cmb_status_oplaty_czynsz.Items.Clear();
+            cmb_status_oplaty_czynsz.Items.AddRange(statusy);
+            cmb_status_oplaty_woda.Items.Clear();
+            cmb_status_oplaty_woda.Items.AddRange(statusy);
+            cmb_status_oplaty_prad.Items.Clear();
+            cmb_status_oplaty_prad.Items.AddRange(statusy);
 
             txt_czynsz_oplaty.DataBindings.Add("Text", bsOplaty, "Czynsz");
             txt_woda_oplaty.DataBindings.Add("Text", bsOplaty, "Woda");
             txt_prad_oplaty.DataBindings.Add("Text", bsOplaty, "Prad");
-            cmb_status_oplaty.DataBindings.Add("Text", bsOplaty, "StatusOplaty", true, DataSourceUpdateMode.OnPropertyChanged);
+            cmb_status_oplaty_czynsz.DataBindings.Add("Text", bsOplaty, "StatusCzynszu", true, DataSourceUpdateMode.OnPropertyChanged);
+            cmb_status_oplaty_woda.DataBindings.Add("Text", bsOplaty, "StatusWody", true, DataSourceUpdateMode.OnPropertyChanged);
+            cmb_status_oplaty_prad.DataBindings.Add("Text", bsOplaty, "StatusPradu", true, DataSourceUpdateMode.OnPropertyChanged);
             cmb_umowa_oplaty.DataBindings.Add("SelectedValue", bsOplaty, "IdUmowyNajmu", true, DataSourceUpdateMode.OnPropertyChanged);
 
             btn_dodaj_oplate.Click += btn_dodaj_oplate_Click;
@@ -131,9 +138,21 @@ namespace Zarzadzanie_nieruchomosciami_ADO.NET
                 return false;
             }
 
-            if (string.IsNullOrWhiteSpace(cmb_status_oplaty.Text))
+            if (string.IsNullOrWhiteSpace(cmb_status_oplaty_czynsz.Text))
             {
-                komunikat = "Wybierz status opłaty!";
+                komunikat = "Wybierz status czynszu!";
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(cmb_status_oplaty_woda.Text))
+            {
+                komunikat = "Wybierz status wody!";
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(cmb_status_oplaty_prad.Text))
+            {
+                komunikat = "Wybierz status prądu!";
                 return false;
             }
 
@@ -154,17 +173,21 @@ namespace Zarzadzanie_nieruchomosciami_ADO.NET
                 decimal czynsz = decimal.Parse(txt_czynsz_oplaty.Text);
                 decimal woda = string.IsNullOrWhiteSpace(txt_woda_oplaty.Text) ? 0 : decimal.Parse(txt_woda_oplaty.Text);
                 decimal prad = string.IsNullOrWhiteSpace(txt_prad_oplaty.Text) ? 0 : decimal.Parse(txt_prad_oplaty.Text);
-                string status = cmb_status_oplaty.Text;
                 object idUmowy = cmb_umowa_oplaty.SelectedValue;
+                string statusCzynszu = cmb_status_oplaty_czynsz.Text;
+                string statusWody = cmb_status_oplaty_woda.Text;
+                string statusPradu = cmb_status_oplaty_prad.Text;
 
                 bsOplaty.AddNew();
                 DataRowView nowaOplata = (DataRowView)bsOplaty.Current;
 
                 nowaOplata["IdUmowyNajmu"] = idUmowy;
                 nowaOplata["Czynsz"] = czynsz;
+                nowaOplata["StatusCzynszu"] = statusCzynszu;
                 nowaOplata["Woda"] = woda;
+                nowaOplata["StatusWody"] = statusWody;
                 nowaOplata["Prad"] = prad;
-                nowaOplata["StatusOplaty"] = status;
+                nowaOplata["StatusPradu"] = statusPradu;
 
                 bsOplaty.EndEdit();
                 ZapiszZmiany();
@@ -194,16 +217,20 @@ namespace Zarzadzanie_nieruchomosciami_ADO.NET
                     decimal czynsz = decimal.Parse(txt_czynsz_oplaty.Text);
                     decimal woda = string.IsNullOrWhiteSpace(txt_woda_oplaty.Text) ? 0 : decimal.Parse(txt_woda_oplaty.Text);
                     decimal prad = string.IsNullOrWhiteSpace(txt_prad_oplaty.Text) ? 0 : decimal.Parse(txt_prad_oplaty.Text);
-                    string status = cmb_status_oplaty.Text;
                     object idUmowy = cmb_umowa_oplaty.SelectedValue;
+                    string statusCzynszu = cmb_status_oplaty_czynsz.Text;
+                    string statusWody = cmb_status_oplaty_woda.Text;
+                    string statusPradu = cmb_status_oplaty_prad.Text;
 
                     DataRowView edytowana = (DataRowView)bsOplaty.Current;
 
                     edytowana["IdUmowyNajmu"] = idUmowy;
                     edytowana["Czynsz"] = czynsz;
+                    edytowana["StatusCzynszu"] = statusCzynszu;
                     edytowana["Woda"] = woda;
+                    edytowana["StatusWody"] = statusWody;
                     edytowana["Prad"] = prad;
-                    edytowana["StatusOplaty"] = status;
+                    edytowana["StatusPradu"] = statusPradu;
 
                     bsOplaty.EndEdit();
                     ZapiszZmiany();
@@ -230,10 +257,12 @@ namespace Zarzadzanie_nieruchomosciami_ADO.NET
                 {
                     DataRowView wybranaOplata = (DataRowView)bsOplaty.Current;
                     decimal suma = (decimal)wybranaOplata["Czynsz"] + (decimal)wybranaOplata["Woda"] + (decimal)wybranaOplata["Prad"];
-                    string status = wybranaOplata["StatusOplaty"].ToString();
+                    string statusCzynszu = wybranaOplata["StatusCzynszu"].ToString();
+                    string statusWody = wybranaOplata["StatusWody"].ToString();
+                    string statusPradu = wybranaOplata["StatusPradu"].ToString();
 
                     DialogResult result = MessageBox.Show(
-                        $"Czy na pewno chcesz usunąć opłatę?\nKwota: {suma}\nStatus: {status}",
+                        $"Czy na pewno chcesz usunąć opłatę?\nKwota: {suma}\nCzynsz: {statusCzynszu} | Woda: {statusWody} | Prąd: {statusPradu}",
                         "Potwierdzenie usunięcia",
                         MessageBoxButtons.YesNo,
                         MessageBoxIcon.Question);
