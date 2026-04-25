@@ -4,7 +4,7 @@ GO
 USE Zarzadanie_Nieruchomosciami;
 GO
 
-﻿CREATE TABLE Wlasciciele (
+CREATE TABLE Wlasciciele (
     IdWlasciciela INT IDENTITY(1,1) PRIMARY KEY,
     Imie NVARCHAR(50) NOT NULL,
     Nazwisko NVARCHAR(100) NOT NULL,
@@ -13,7 +13,6 @@ GO
     Email NVARCHAR(100) UNIQUE NOT NULL CHECK (Email LIKE '%@%.%'),
     NumerKontaBankowego CHAR(26) NOT NULL CHECK (LEN(NumerKontaBankowego) = 26 AND NumerKontaBankowego NOT LIKE '%[^0-9]%')
 );
-
 
 CREATE TABLE Najemcy (
     IdNajemcy INT IDENTITY(1,1) PRIMARY KEY,
