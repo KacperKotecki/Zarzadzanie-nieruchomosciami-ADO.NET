@@ -30,7 +30,7 @@ CREATE TABLE Nieruchomosci (
     Ulica NVARCHAR(150) NOT NULL,
     LiczbaPokoi INT NOT NULL CHECK (LiczbaPokoi > 0),
     TypNieruchomosci NVARCHAR(50) NOT NULL CHECK (TypNieruchomosci IN ('Mieszkanie', 'Pokoj', 'Lokal uslugowy', 'Biuro')),
-    CONSTRAINT FK_Nieruchomosci_Wlasciciele FOREIGN KEY (IdWlasciciela) 
+    CONSTRAINT FK_Nieruchomosci_Wlasciciele FOREIGN KEY (IdWlasciciela)
         REFERENCES Wlasciciele(IdWlasciciela) ON DELETE CASCADE
 );
 
@@ -42,21 +42,26 @@ CREATE TABLE UmowyNajmu (
     DataRozpoczecia DATE NOT NULL,
     DataZakonczenia DATE NOT NULL,
     CONSTRAINT CK_DatyUmowy CHECK (DataZakonczenia >= DataRozpoczecia),
-    CONSTRAINT FK_UmowyNajmu_Nieruchomosci FOREIGN KEY (IdNieruchomosci) 
+    CONSTRAINT FK_UmowyNajmu_Nieruchomosci FOREIGN KEY (IdNieruchomosci)
         REFERENCES Nieruchomosci(IdNieruchomosci) ON DELETE CASCADE,
-    CONSTRAINT FK_UmowyNajmu_Najemcy FOREIGN KEY (IdNajemcy) 
+    CONSTRAINT FK_UmowyNajmu_Najemcy FOREIGN KEY (IdNajemcy)
         REFERENCES Najemcy(IdNajemcy) ON DELETE CASCADE,
-    CONSTRAINT FK_UmowyNajmu_Wlasciciele FOREIGN KEY (IdWlasciciela) 
+    CONSTRAINT FK_UmowyNajmu_Wlasciciele FOREIGN KEY (IdWlasciciela)
         REFERENCES Wlasciciele(IdWlasciciela) ON DELETE NO ACTION
 );
 
 CREATE TABLE Oplaty (
-    IdOplaty INT IDENTITY(1,1) PRIMARY KEY,
-    IdUmowyNajmu INT NOT NULL,
-    Czynsz DECIMAL(10,2) NOT NULL CHECK (Czynsz >= 0),
-    Woda DECIMAL(10,2) NOT NULL DEFAULT 0 CHECK (Woda >= 0),
-    Prad DECIMAL(10,2) NOT NULL DEFAULT 0 CHECK (Prad >= 0),
-    StatusOplaty NVARCHAR(20) NOT NULL DEFAULT 'Oczekujaca' CHECK (StatusOplaty IN ('Oczekujaca', 'Zaplacona', 'Opozniona')),
-    CONSTRAINT FK_Oplaty_UmowyNajmu FOREIGN KEY (IdUmowyNajmu) 
+    IdOplaty      INT IDENTITY(1,1) PRIMARY KEY,
+    IdUmowyNajmu  INT NOT NULL,
+    Czynsz        DECIMAL(10,2) NOT NULL CHECK (Czynsz >= 0),
+    StatusCzynszu NVARCHAR(20)  NOT NULL DEFAULT 'Oczekujaca'
+                  CHECK (StatusCzynszu IN ('Oczekujaca', 'Zaplacona', 'Opozniona')),
+    Woda          DECIMAL(10,2) NOT NULL DEFAULT 0 CHECK (Woda >= 0),
+    StatusWody    NVARCHAR(20)  NOT NULL DEFAULT 'Oczekujaca'
+                  CHECK (StatusWody IN ('Oczekujaca', 'Zaplacona', 'Opozniona')),
+    Prad          DECIMAL(10,2) NOT NULL DEFAULT 0 CHECK (Prad >= 0),
+    StatusPradu   NVARCHAR(20)  NOT NULL DEFAULT 'Oczekujaca'
+                  CHECK (StatusPradu IN ('Oczekujaca', 'Zaplacona', 'Opozniona')),
+    CONSTRAINT FK_Oplaty_UmowyNajmu FOREIGN KEY (IdUmowyNajmu)
         REFERENCES UmowyNajmu(IdUmowyNajmu) ON DELETE CASCADE
 );
