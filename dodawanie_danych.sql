@@ -98,7 +98,7 @@ INSERT INTO Nieruchomosci (IdWlasciciela, Miasto, Ulica, LiczbaPokoi, TypNieruch
 (27, 'Elbląg', 'Stary Rynek 5', 2, 'Mieszkanie');
 
 INSERT INTO UmowyNajmu (IdNieruchomosci, IdNajemcy, IdWlasciciela, DataRozpoczecia, DataZakonczenia) VALUES
-(1, 1, 1, '2024-01-01', '2024-12-31'),
+(1, 1, 1, '2020-01-01', '2024-12-31'),
 (2, 2, 1, '2024-02-01', '2025-01-31'),
 (3, 3, 2, '2024-03-01', '2024-08-31'),
 (4, 4, 2, '2024-01-15', '2025-01-14'),

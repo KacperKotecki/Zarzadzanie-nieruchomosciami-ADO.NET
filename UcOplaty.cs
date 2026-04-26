@@ -25,8 +25,8 @@ namespace Zarzadzanie_nieruchomosciami_ADO.NET
             DataTable dtOplaty = mainForm.dsWynajem.Tables["Oplaty"];
             if (!dtOplaty.Columns.Contains("Suma"))
             {
+                // Tworzymy zwykłą kolumnę, a nie automatyczne wyrażenie
                 DataColumn colSuma = new DataColumn("Suma", typeof(decimal));
-                colSuma.Expression = "Czynsz + Woda + Prad";
                 dtOplaty.Columns.Add(colSuma);
             }
 
@@ -83,6 +83,31 @@ namespace Zarzadzanie_nieruchomosciami_ADO.NET
             btn_dodaj_oplate.Click += btn_dodaj_oplate_Click;
             btn_edytuj_oplate.Click += btn_edytuj_oplate_Click;
             btn_usun_oplate.Click += btn_usun_oplate_Click;
+
+          
+            foreach (DataRow rowOplata in dtOplaty.Rows)
+            {
+                decimal czynsz = Convert.ToDecimal(rowOplata["Czynsz"]);
+                decimal woda = Convert.ToDecimal(rowOplata["Woda"]);
+                decimal prad = Convert.ToDecimal(rowOplata["Prad"]);
+                decimal sumaBazowa = czynsz + woda + prad;
+
+                int idUmowy = Convert.ToInt32(rowOplata["IdUmowyNajmu"]);
+                DataRow umowaRow = mainForm.dsWynajem.Tables["UmowyNajmu"].Select($"IdUmowyNajmu = {idUmowy}").FirstOrDefault();
+
+                if (umowaRow != null)
+                {
+                    DateTime start = (DateTime)umowaRow["DataRozpoczecia"];
+                    DateTime koniec = (DateTime)umowaRow["DataZakonczenia"];
+
+                    if (koniec >= start.AddYears(3))
+                    {
+                        sumaBazowa *= 0.95m;
+                    }
+                }
+                
+                rowOplata["Suma"] = sumaBazowa;
+            }
         }
 
         private void ZapiszZmiany()
@@ -193,7 +218,31 @@ namespace Zarzadzanie_nieruchomosciami_ADO.NET
                 ZapiszZmiany();
 
                 decimal suma = czynsz + woda + prad;
-                MessageBox.Show($"Opłata została dodana!\nŁączna kwota: {suma}", "Sukces", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                string tekstUlgi = "";
+                DataRow umowaRow = mainForm.dsWynajem.Tables["UmowyNajmu"].Select($"IdUmowyNajmu = {idUmowy}").FirstOrDefault();
+                decimal ulga = 0;
+                decimal suma_temp = 0;
+                if (umowaRow != null)
+                {
+                    DateTime start = (DateTime)umowaRow["DataRozpoczecia"];
+                    DateTime koniec = (DateTime)umowaRow["DataZakonczenia"];
+
+                    if (koniec >= start.AddYears(3))
+                    { 
+                        suma_temp = suma;
+                        suma_temp *= 0.95m;
+                        ulga = suma - suma_temp;
+                        suma = suma_temp;
+
+                        tekstUlgi = $"(Naliczono 5% ulgi za umowę długoterminową! -{ulga:C})";
+                    }
+                }
+                nowaOplata["Suma"] = suma;
+
+                bsOplaty.EndEdit();
+                ZapiszZmiany();
+
+                MessageBox.Show($"Opłata została dodana! {tekstUlgi}\nŁączna kwota: {suma}", "Sukces", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
@@ -234,9 +283,34 @@ namespace Zarzadzanie_nieruchomosciami_ADO.NET
 
                     bsOplaty.EndEdit();
                     ZapiszZmiany();
-
+                    string tekstUlgi = "";
                     decimal suma = czynsz + woda + prad;
-                    MessageBox.Show($"Opłata została zaktualizowana!\nŁączna kwota: {suma:C}", "Sukces", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    DataRow umowaRow = mainForm.dsWynajem.Tables["UmowyNajmu"].Select($"IdUmowyNajmu = {idUmowy}").FirstOrDefault();
+                    decimal ulga = 0;
+                    decimal suma_temp = 0;
+                    if (umowaRow != null)
+                    {
+                        DateTime start = (DateTime)umowaRow["DataRozpoczecia"];
+                        DateTime koniec = (DateTime)umowaRow["DataZakonczenia"];
+
+                        if (koniec >= start.AddYears(3))
+                        {
+                            suma_temp = suma;
+                            suma_temp *= 0.95m;
+                            ulga = suma - suma_temp;
+                            suma = suma_temp;
+
+                            tekstUlgi = $"(Naliczono 5% ulgi za umowę długoterminową! -{ulga:C})";
+                        }
+                    }
+                    
+                    edytowana["Suma"] = suma; 
+
+                    bsOplaty.EndEdit();
+                    ZapiszZmiany();
+
+
+                    MessageBox.Show($"Opłata została zaktualizowana!{tekstUlgi}\nŁączna kwota: {suma:C}", "Sukces", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
                 {
